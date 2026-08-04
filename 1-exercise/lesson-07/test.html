@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const countCharactersFP = (str) =>
+      //     [...str].reduce((acc, char) => {
+      //       acc[char] = (acc[char] || 0) + 1;
+      //       return acc;
+      //     }, {});
+
+      const testJet = (str) => {
+        let jet = [...str].reduce((acc, char) => {
+          acc[char] = (acc[char] || 0) + 1;
+          return acc;
+        }, {});
+        return jet;
+      };
+
+      const reverseText = (word) => {
+        let result = [...word].reverse().join("");
+        return result;
+      };
+
+      console.log(reverseText("Jet"));
+      console.log(testJet("12"));
+    </script>
+  </body>
+</html>

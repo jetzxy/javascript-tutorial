@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Exercise</title>
+
+    <style>
+        .btn {
+            border: 2px solid #111
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+        .bg-orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>Adults Plain Cotton T-shirt</p>
+    <p>Price: $7.99</p>
+    <div>
+        <button class="btn bg-yellow" onclick="alert('Added')">Add to cart</button>
+        <button class="btn bg-orange" onclick="buyNow()">Buy now</button>
+    </div>
+
+
+    <script>
+        function buyNow() {
+            console.log("Loading...");
+            alert("Purchased");
+        }
+    </script>
+</body>
+</html>

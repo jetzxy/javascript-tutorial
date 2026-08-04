@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10 A</title>
+
+    <style>
+      .btn {
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-yellow {
+        background-color: rgb(255, 216, 20);
+        padding: 10px 50px;
+        border-radius: 50px;
+      }
+
+      .btn-black {
+        background-color: #111;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
+
+      .btn-white {
+        background-color: rgb(230, 230, 230);
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 10A -->
+    <div style="margin-bottom: 50px">
+      <button class="btn btn-yellow">Add to Cart</button>
+    </div>
+
+    <!-- 10B -->
+    <div style="margin-bottom: 30px">
+      <button class="btn btn-black">Request now</button>
+      <button class="btn btn-white">Schedule for later</button>
+    </div>
+
+    <!-- 10C -->
+    <div>
+      <button class="js-button">Test</button>
+    </div>
+
+    <script>
+      const buttonElement = document.querySelector(".js-button");
+      let hasJsClass = buttonElement.classList.contains("js-button");
+      console.log(hasJsClass);
+    </script>
+  </body>
+</html>

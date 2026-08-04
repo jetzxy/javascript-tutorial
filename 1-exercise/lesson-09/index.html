@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson - 09</title>
+  </head>
+  <body>
+    <!-- 9A - 9B -->
+    <!-- <button class="js-btn">9a</button>
+    <button class="js-btn-new" onclick="handleClick()">9b</button> -->
+
+    <button onclick="handleClickHeads()">heads</button>
+    <button onclick="handleClickTails()">tails</button>
+    <p class="js-result"></p>
+    <input
+      class="js-text"
+      type="text"
+      placeholder="Name"
+      onkeydown="handleKeyDown()"
+    />
+    <button onclick="handleClick()">Submit</button>
+    <p class="js-text-result"></p>
+
+    <script>
+      //   console.log(document.querySelector(".js-btn"));
+      //   function handleClick() {
+      //     document.querySelector(".js-btn-new").innerHTML = "9b done";
+      //   }
+
+      //   9C
+      function handleClickHeads() {
+        document.querySelector(".js-result").innerHTML = `You chose: heads`;
+      }
+
+      function handleClickTails() {
+        document.querySelector(".js-result").innerHTML = `You chose: tails`;
+      }
+
+      function handleClick() {
+        const inputElement = document.querySelector(".js-text");
+        let textElement = inputElement.value;
+        document.querySelector(".js-text-result").innerHTML =
+          `Your name is: ${textElement}`;
+      }
+
+      function handleKeyDown() {
+        console.log(event.key);
+        if (event.key === "Enter") {
+          handleClick();
+        }
+      }
+    </script>
+  </body>
+</html>
