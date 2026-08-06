@@ -203,6 +203,63 @@
       // }
 
       // console.log(numberOfLetters("hello world"));
+
+      //11O-11P
+      // let array1 = ["hello", "world", "search", "good", "search"];
+      // let index = -1;
+
+      // for (let i = 0; i < array1.length; i++) {
+      //   let text = array1[i];
+      //   if (text === "search") {
+      //     index = i;
+      //     break;
+      //   }
+      // }
+
+      // console.log(index);
+
+      // let words = ["not", "found"];
+      // index = -1;
+
+      // for (let i = 0; i < words.length; i++) {
+      //   if (words[i] === "search") {
+      //     index = i;
+      //   }
+      // }
+
+      // console.log(index);
+
+      // function findIndex(array, word) {
+      //   for (let i = 0; i <= array.length; i++) {
+      //     if (array[i] === word) {
+      //       return i;
+      //     }
+      //   }
+      //   return -1;
+      // }
+
+      // console.log(findIndex(["green", "red", "blue", "red"], "red"));
+      // console.log(findIndex(["green", "red", "blue", "red"], "yellow"));
+
+      //11R - 11T
+      function removeEgg(foods) {
+        const foodsCopy = foods.slice();
+        const reversedFoods = foodsCopy.reverse();
+        let result = [];
+        let eggsRemoved = 0;
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i] === "egg" && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          }
+
+          result.push(foods[i]);
+        }
+
+        return result;
+      }
+
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
     </script>
   </body>
 </html>
