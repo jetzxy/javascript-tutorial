@@ -7,33 +7,52 @@
   </head>
   <body>
     <script>
-      function findIndex(array, word) {
-        for (let i = 0; i <= array.length; i++) {
-          if (array[i] === word) {
-            return i;
+      // function findIndex(array, word) {
+      //   for (let i = 0; i <= array.length; i++) {
+      //     if (array[i] === word) {
+      //       return i;
+      //     }
+      //   }
+      //   return -1;
+      // }
+
+      // function unique(array) {
+      //   const result = []; //green red blue
+
+      //   for (let i = 0; i < array.length; i++) {
+      //     const word = array[i]; // red
+
+      //     if (findIndex(result, word) === -1) {
+      //       result.push(word);
+      //     }
+      //   }
+
+      //   return result;
+      // }
+
+      // console.log(findIndex(["green", "red", "blue", "red"], "red"));
+
+      // console.log(unique(["green", "red", "blue", "red"]));
+      // console.log(unique(["red", "green", "green", "red"]));
+
+      function moveZeroes(nums) {
+        let writeIndex = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] !== 0) {
+            nums[writeIndex] = nums[i];
+            writeIndex++;
           }
         }
-        return -1;
+
+        // for (let i = writeIndex; i < nums.length; i++) {
+        //   nums[i] = 0;
+        // }
+
+        return nums;
       }
 
-      function unique(array) {
-        const result = []; //green red blue
-
-        for (let i = 0; i < array.length; i++) {
-          const word = array[i]; // red
-
-          if (findIndex(result, word) === -1) {
-            result.push(word);
-          }
-        }
-
-        return result;
-      }
-
-      console.log(findIndex(["green", "red", "blue", "red"], "red"));
-
-      console.log(unique(["green", "red", "blue", "red"]));
-      console.log(unique(["red", "green", "green", "red"]));
+      console.log(moveZeroes([0, 1, 0, 3, 12]));
     </script>
   </body>
 </html>
