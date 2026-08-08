@@ -6,7 +6,7 @@
     <title>App</title>
   </head>
   <body>
-    <button onclick="handleClick()" class="js-btn">Start</button>
+    <button class="js-btn">Start</button>
     <button onclick="addButton()">Add to cart</button>
     <div class="add-result"></div>
     <script>
@@ -29,37 +29,94 @@
 
       //   runTwice(add);
 
-      //   //12C
-      //   function handleClick() {
-      //     const element = document.querySelector(".js-btn");
+      //12C
+      // function handleClick() {
+      //   const element = document.querySelector(".js-btn");
 
-      //     element.innerHTML = "Loading...";
+      //   element.innerHTML = "Loading...";
 
-      //     setTimeout(function () {
-      //       element.innerHTML = "Finished!";
-      //     }, 1000);
-      //   }
-
-      //   let timeoutId;
-
-      //   function addButton() {
-      //     const element = document.querySelector(".add-result");
-      //     element.innerHTML = "Added";
-
-      //     clearTimeout(timeoutId);
-
-      //     timeoutId = setTimeout(function () {
-      //       element.remove();
-      //     }, 2000);
-      //   }
-
-      //   setInterval(function () {
-      //     if (document.title === "App") {
-      //       document.title = "(2) New messages";
-      //     } else {
-      //       document.title = "App";
-      //     }
+      //   setTimeout(() => {
+      //     element.innerHTML = "Finished!";
       //   }, 1000);
+      // }
+
+      document.querySelector(".js-btn").addEventListener("click", () => {
+        const element = document.querySelector(".js-btn");
+
+        element.innerHTML = "Loading...";
+
+        setTimeout(() => {
+          element.innerHTML = "Finished!";
+        }, 1000);
+      });
+
+      let timeoutId;
+
+      function addButton() {
+        const element = document.querySelector(".add-result");
+        element.innerHTML = "Added";
+
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+          element.remove();
+        }, 2000);
+      }
+
+      setInterval(() => {
+        if (document.title === "App") {
+          document.title = "(2) New messages";
+        } else {
+          document.title = "App";
+        }
+      }, 1000);
+
+      //12J-K
+      // const multiply = (num1, num2) => num1 * num2;
+
+      // console.log(multiply(2, 3));
+      // console.log(multiply(7, 10));
+
+      //12L
+      // function countPositive(nums) {
+      //   let positive = 0;
+
+      //   nums.forEach((value) => {
+      //     if (value > 0) {
+      //       positive++;
+      //     }
+      //   });
+
+      //   return positive;
+      // }
+
+      // console.log(countPositive([1, -3, 5]));
+      // console.log(countPositive([-2, 3, -5, 7, 10]));
+
+      //12M
+      // function addNum(array, num) {
+      //   // return array.map((value) => value + num);
+      //   return array.map((value) => {
+      //     return value + num;
+      //   });
+      // }
+
+      // console.log(addNum([1, 2, 3], 2));
+      // console.log(addNum([-2, -1, 0, 99], 2));
+
+      //12N
+      function removeEgg(foods) {
+        let eggRemoved = 0;
+        return foods.filter((value, index) => {
+          if (value === "egg" && eggRemoved < 2) {
+            eggRemoved++;
+            return false;
+          }
+          return true;
+        });
+      }
+
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
     </script>
   </body>
 </html>

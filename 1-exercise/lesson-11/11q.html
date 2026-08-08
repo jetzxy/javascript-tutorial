@@ -30,29 +30,72 @@
       //   return result;
       // }
 
+      // function findIndex(array, word) {
+      //   let index = -1;
+
+      //   array.forEach((item, i) => {
+      //     // console.log(item, i);
+      //     // If we haven't found a match yet and the current item matches
+      //     // console.log(index === -1 && item === word);
+      //     console.log(`item: ${item} word: ${word}`);
+      //     if (index === -1 && item === word) {
+      //       index = i;
+      //     }
+      //   });
+
+      //   return index;
+      // }
+
+      // function unique(array) {
+      //   const result = [];
+
+      //   array.forEach((word) => {
+      //     console.log(findIndex(result, word), "jet");
+      //     if (findIndex(result, word) === -1) {
+      //       result.push(word);
+      //     }
+      //   });
+
+      //   return result;
+      // }
+
+      //Using indexOf
+      // function unique(array) {
+      //   const result = [];
+      //   array.forEach((word) => {
+      //     if (result.indexOf(word) === -1) {
+      //       result.push(word);
+      //     }
+      //   });
+      //   return result;
+      // }
+
+      //The modern 1-liner using Set
+      // const unique = (array) => [...new Set(array)];
+
       // console.log(findIndex(["green", "red", "blue", "red"], "red"));
 
       // console.log(unique(["green", "red", "blue", "red"]));
       // console.log(unique(["red", "green", "green", "red"]));
 
-      function moveZeroes(nums) {
-        let writeIndex = 0;
+      // function moveZeroes(nums) {
+      //   let writeIndex = 0;
 
-        for (let i = 0; i < nums.length; i++) {
-          if (nums[i] !== 0) {
-            nums[writeIndex] = nums[i];
-            writeIndex++;
-          }
-        }
+      //   for (let i = 0; i < nums.length; i++) {
+      //     if (nums[i] !== 0) {
+      //       nums[writeIndex] = nums[i];
+      //       writeIndex++;
+      //     }
+      //   }
 
-        // for (let i = writeIndex; i < nums.length; i++) {
-        //   nums[i] = 0;
-        // }
+      //   // for (let i = writeIndex; i < nums.length; i++) {
+      //   //   nums[i] = 0;
+      //   // }
 
-        return nums;
-      }
+      //   return nums;
+      // }
 
-      console.log(moveZeroes([0, 1, 0, 3, 12]));
+      // console.log(moveZeroes([0, 1, 0, 3, 12]));
     </script>
   </body>
 </html>
