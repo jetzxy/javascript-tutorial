@@ -60,22 +60,23 @@
       // }
 
       //Using indexOf
-      // function unique(array) {
-      //   const result = [];
-      //   array.forEach((word) => {
-      //     if (result.indexOf(word) === -1) {
-      //       result.push(word);
-      //     }
-      //   });
-      //   return result;
-      // }
+      function unique(array) {
+        const result = [];
+        array.forEach((word) => {
+          console.log(result.indexOf(word));
+          if (result.indexOf(word) === -1) {
+            result.push(word);
+          }
+        });
+        return result;
+      }
 
       //The modern 1-liner using Set
       // const unique = (array) => [...new Set(array)];
 
       // console.log(findIndex(["green", "red", "blue", "red"], "red"));
 
-      // console.log(unique(["green", "red", "blue", "red"]));
+      console.log(unique(["green", "red", "blue", "green"]));
       // console.log(unique(["red", "green", "green", "red"]));
 
       // function moveZeroes(nums) {
