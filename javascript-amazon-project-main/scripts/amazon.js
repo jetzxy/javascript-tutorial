@@ -4,32 +4,32 @@ import { formatCurrency } from "./utils/money.js";
 
 let productsHTML = "";
 
-products.forEach(({ image, id, name, rating, priceCents } = product) => {
+products.forEach((product) => {
   productsHTML += `
   <div class="product-container">
           <div class="product-image-container">
             <img
               class="product-image"
-              src=${image}
+              src=${product.image}
             />
           </div>
 
           <div class="product-name limit-text-to-2-lines">
-            ${name}
+            ${product.name}
           </div>
 
           <div class="product-rating-container">
             <img
               class="product-rating-stars"
-              src="images/ratings/rating-${rating.stars * 10}.png"
+              src="${product.getStarsUrl()}"
             />
-            <div class="product-rating-count link-primary">${rating.count}</div>
+            <div class="product-rating-count link-primary">${product.rating.count}</div>
           </div>
 
-          <div class="product-price">$${formatCurrency(priceCents)}</div>
+          <div class="product-price">${product.getPrice()}</div>
 
           <div class="product-quantity-container">
-            <select class="js-quantity-selector-${id}">
+            <select class="js-quantity-selector-${product.id}">
               <option selected value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -45,12 +45,12 @@ products.forEach(({ image, id, name, rating, priceCents } = product) => {
 
           <div class="product-spacer"></div>
 
-          <div class="added-to-cart js-added-to-cart-${id}">
+          <div class="added-to-cart js-added-to-cart-${product.id}">
             <img src="images/icons/checkmark.png" />
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${id}">Add to Cart</button>
+          <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${product.id}">Add to Cart</button>
         </div>
  `;
 });
