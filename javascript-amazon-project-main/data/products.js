@@ -95,7 +95,7 @@ export function loadProducts(fun) {
       return new Product(productDetails);
     });
 
-    console.log("Load products");
+    console.log("load products");
     fun();
   });
 

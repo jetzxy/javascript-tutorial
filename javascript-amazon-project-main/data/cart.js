@@ -39,7 +39,7 @@ export function addToCart(productId, quantity = 1) {
     const quantitySelector = document.querySelector(
       `.js-quantity-selector-${productId}`,
     );
-    
+
     if (quantitySelector) {
       quantity = Number(quantitySelector.value);
     }
@@ -115,4 +115,17 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
 
   matchingItem.deliveryOptionId = deliveryOptionId;
   saveToStorage();
+}
+
+export function loadCart(fun) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("load", () => {
+    console.log(xhr.response);
+
+    fun();
+  });
+
+  xhr.open("GET", "https://supersimplebackend.dev/cart");
+  xhr.send();
 }
